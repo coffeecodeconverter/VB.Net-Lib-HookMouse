@@ -1,1 +1,92 @@
-HookMouse VB.NET Module
+# HookMouse - Simulating Smooth Mouse Events with Full Control
+
+## Overview
+
+**HookMouse** is a powerful and easy-to-use VB.NET module that allows you to simulate mouse events in Windows with full control and smooth animations. Whether you're looking to simulate mouse movements or clicks, this module gives you granular control over mouse actions and lets you animate movements with various easing functions, customizable duration, and framerate. 
+
+Designed with both synchronous and asynchronous capabilities, this module allows you to create realistic, fluid interactions with the system mouse. Perfect for automation tasks, testing, or simply building fun and dynamic user interactions.
+
+## Key Features
+
+- **Smooth Animations:** Mouse movements can be animated smoothly with configurable easing functions for realistic transitions.
+- **Granular Control:** Full control over cursor movements, click actions, and mouse states. Adjust speed, duration, and framerate for precise control.
+- **Asynchronous and Synchronous Support:** Choose how to execute the functions to fit your needs, whether you want them to run in the background or wait for completion.
+- **Flexible API:** Control every aspect of mouse events, including drag-and-drop, clicks, mouse position locking, and scrolling.
+
+## Functions Available
+
+- **MoveCursor(x, y, durationMs, fps, easing)**  
+  Smoothly moves the cursor to a specific location `(x, y)` within a specified duration, with framerate control and customizable easing.
+  
+- **ClickAndDrag(startX, startY, endX, endY, durationMs, fps, easing)**  
+  Simulate a drag action from a start point `(startX, startY)` to an end point `(endX, endY)` with customizable duration, framerate, and easing.
+  
+- **DoLeftDown()**  
+  Simulate pressing down the left mouse button.
+  
+- **DoLeftUp()**  
+  Simulate releasing the left mouse button.
+  
+- **DoLeftClick()**  
+  Simulate a single left mouse click (down + up).
+  
+- **DoLeftDoubleClick()**  
+  Simulate a double left-click.
+  
+- **DoRightDown()**  
+  Simulate pressing down the right mouse button.
+  
+- **DoRightUp()**  
+  Simulate releasing the right mouse button.
+  
+- **DoRightClick()**  
+  Simulate a single right mouse click (down + up).
+  
+- **DoMiddleDown()**  
+  Simulate pressing down the middle mouse button.
+  
+- **DoMiddleUp()**  
+  Simulate releasing the middle mouse button.
+  
+- **DoMiddleClick()**  
+  Simulate a middle-click (down + up).
+  
+- **DoMouseScroll(scrollAmountInt)**  
+  Simulate scrolling the mouse wheel by the specified amount.
+  
+- **DoKeepMouseInPlace()**  
+  Locks the mouse at its current position.
+  
+- **ResetMouseState()**  
+  Resets the mouse state to default (no buttons pressed).
+  
+- **NonBlockingWait(waitInMs)**  
+  Wait for a specified amount of time asynchronously, allowing other tasks to run during the wait.
+
+## Requirements
+
+- .NET Framework 4.5.1 or higher
+
+## Installation
+
+To use **HookMouse** in your project:
+
+1. Download or clone the repository to your local machine.
+2. Add the `HookMouse` module to your project by including the `HookMouse.vb` file.
+3. Make sure your project targets .NET Framework 4.5.1 or higher.
+4. Use the provided functions to simulate mouse actions!
+
+## Example Usage
+
+```vb
+' Example 1: Move the mouse smoothly to position (500, 500) over 1 second with 60fps and ease-in-out effect
+Await MoveCursor(500, 500, 1000, 60, "easeInOut")
+
+' Example 2: Simulate a click and drag from (100, 100) to (300, 300) over 2 seconds
+Await ClickAndDrag(100, 100, 300, 300, 2000, 60, "easeOut")
+
+' Example 3: Simulate a left click
+DoLeftClick()
+
+' Example 4: Lock the mouse in its current position
+DoKeepMouseInPlace()
