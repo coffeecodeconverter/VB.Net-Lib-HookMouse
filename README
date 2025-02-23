@@ -1,10 +1,8 @@
-HookMouse - Simulating Smooth Mouse Events with Full Control
+# HookMouse - Simulating Smooth Mouse Events with Full Control
 
 ## Overview
 
-**HookMouse** is a powerful and easy-to-use VB.NET module that allows you to simulate mouse events in Windows with full control and smooth animations. Whether you're looking to simulate mouse movements or clicks, this module gives you granular control over mouse actions and lets you animate movements with various easing functions, customizable duration, and framerate. 
-
-Designed with both synchronous and asynchronous capabilities, this module allows you to create realistic, fluid interactions with the system mouse. Perfect for automation tasks, testing, or simply building fun and dynamic user interactions.
+**HookMouse** is a powerful and easy-to-use VB.NET module that allows you to simulate mouse events in Windows with full control and smooth animations. Whether you're looking to simulate mouse movement, it is designed with both synchronous and asynchronous capabilities. This module allows you to create realistic, fluid interactions with the system mouse. It is perfect for automation tasks, testing, or simply building smooth mouse interactions.
 
 ## Key Features
 
